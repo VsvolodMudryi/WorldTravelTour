@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500&display=swap');
+
+.smooth {
+    scroll-behavior: smooth;
+}
+
+
+:root {
+    font-family: 'Baloo Da 2', cursive;
+    --main-color:#1c1a36;
+    --menu-color: #cfbe6d;
+    color: var(--main-color);
+}
+header {
+    position: relative;
+
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+h1, h2 {
+    justify-content: center;
+    text-align: center
+}
+
+header nav {
+    position: absolute;
+    top: 0%
+    
+}
+header nav .top-menu {
+    font-family: 'Baloo Da 2', cursive;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0
+}
+
+header nav .search, .top-menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+}
+
+header nav .search, .top-menu li a {
+    display: flex;
+    text-decoration: none;
+    justify-content: space-around; 
+    list-style: none;
+    padding: 0;
+}
+header nav .top-menu li a {
+    text-decoration: none;
+    color: #cfbe6d;
+    padding: 5px;
+    border: 1px solid transparent;
+}
+header nav .top-menu li a:hover {
+    border: 1px solid var(--menu-color);
+}
+
+header img {
+    display: block;
+    width: 100%;
+}
+
+main .popular img {
+    display: block;
+    width: 100%;
+}
+
+main .popular .button {
+    justify-content: center;
+    align-items: center;
+
+}
+
+@media (min-width: 500px) {
+    header nav {
+        display: flex;
+        align-items: center;
+    }
+
+    header .top-menu {
+        flex: 1;
+    }
+main .tour-list .tour-card img {
+    display: block;
+    width: 100%;
+}
+
+@media (min-width: 580px) {
+
+    main .tour-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+    }    
+
+}
+
+@media (min-width: 660px) {
+
+    main .tour-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }    
+
+}
+
+@media (min-width: 980px) {
+
+    main .tour-list {
+        grid-template-columns: repeat(4, 1fr);
+    }    
+
+}
+
+
+.button {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px 10px;
+  position: center;
+  overflow: hidden;
+  border: 2px solid #cfbe6d;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif; 
+  color: #cfbe6d;
+  transition: .2s ease-in-out;
+}
+.button:before {
+  content: "";
+  background: linear-gradient(90deg, rgba(255,255,255,.1), rgba(255,255,255,.5));
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: -8px;
+  left: -75px;
+  transform: skewX(-45deg);
+}
+.button:hover {
+  background: #cfbe6d;
+  color: #fff;
+}
+.button:hover:before {
+  left: 150px;
+  transition: .5s ease-in-out;
+}
+
