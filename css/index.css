@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500&display=swap');
-
+:root {
+    font-family: 'Baloo Da 2', cursive;
+    --main-color:#1c1a36;
+    --menu-color: #dcb119;
+    color: var(--main-color);
+}
 .smooth {
     scroll-behavior: smooth;
 }
 
-
-:root {
-    font-family: 'Baloo Da 2', cursive;
-    --main-color:#1c1a36;
-    --menu-color: #cfbe6d;
-    color: var(--main-color);
+body {
+     background-color: #b0e7de;
 }
 header {
     position: relative;
@@ -20,7 +21,7 @@ h1, h2, h3, p {
     margin: 0;
     padding: 0;
 }
-h1, h2 {
+h1, h2, h3 {
     justify-content: center;
     text-align: center
 }
@@ -53,7 +54,7 @@ header nav .search, .top-menu li a {
 }
 header nav .top-menu li a {
     text-decoration: none;
-    color: #cfbe6d;
+    color: #dcb119;
     padding: 5px;
     border: 1px solid transparent;
 }
@@ -65,16 +66,83 @@ header img {
     display: block;
     width: 100%;
 }
-
-main .popular img {
-    display: block;
-    width: 100%;
+/* hot */
+.hot {
+    align-content: center;
+    border-bottom: 1px solid var(--main-color);
+    padding: 50px 0;
 }
 
-main .popular .button {
-    justify-content: center;
+.hot-container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
 
+.hot h2 {
+    padding-top: 10px;
+}
+
+.hot p {
+    margin: 20px 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: var(--main-color);
+    color: black;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.countdown {
+    display: flex;
+    padding: 10px;
+}
+
+.time {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time p {
+    padding: 0;
+    margin: 0;
+    color: var(--main-color);
+}
+
+.time p, .time h2 {
+    font-size: 1rem;
+}
+
+@media (min-width: 500px) {
+.time {
+    padding: 15px;
+}
+
+.time p, .time h2 {
+    font-size: 1.5rem;
+}
+}
+
+@media (min-width: 775px) {
+    .hot {
+        display: grid;
+        grid-gap: 20px;
+        grid-template: 1fr/ 40% 60%;
+    }
+
+    .hot p {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (min-width: 900px) {
+    .time p, .time h2 {
+    font-size: 2rem;
+} 
 }
 
 @media (min-width: 500px) {
@@ -86,10 +154,6 @@ main .popular .button {
     header .top-menu {
         flex: 1;
     }
-main .tour-list .tour-card img {
-    display: block;
-    width: 100%;
-}
 
 @media (min-width: 580px) {
 
@@ -109,7 +173,7 @@ main .tour-list .tour-card img {
 
 }
 
-@media (min-width: 980px) {
+@media (min-width: 1024px) {
 
     main .tour-list {
         grid-template-columns: repeat(4, 1fr);
@@ -117,6 +181,35 @@ main .tour-list .tour-card img {
 
 }
 
+
+@media (min-width: 580px) {
+
+    main .news-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+    }    
+
+}
+
+@media (min-width: 660px) {
+
+    main .news-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }    
+
+}
+
+@media (min-width: 980px) {
+
+    main .news-list {
+        grid-template-columns: repeat(4, 1fr);
+    }    
+
+}
+footer {
+    background-color: #b0e7de;
+}
 
 .button {
   text-decoration: none;
@@ -126,10 +219,10 @@ main .tour-list .tour-card img {
   margin: 5px 10px;
   position: center;
   overflow: hidden;
-  border: 2px solid #cfbe6d;
+  border: 2px solid #dcb119;
   border-radius: 8px;
   font-family: 'Montserrat', sans-serif; 
-  color: #cfbe6d;
+  color: #dcb119;
   transition: .2s ease-in-out;
 }
 .button:before {
@@ -143,7 +236,7 @@ main .tour-list .tour-card img {
   transform: skewX(-45deg);
 }
 .button:hover {
-  background: #cfbe6d;
+  background: #dcb119;
   color: #fff;
 }
 .button:hover:before {

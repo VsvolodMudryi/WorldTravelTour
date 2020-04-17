@@ -1,4 +1,3 @@
-new ProductList(new Cart());
 
 window.addEventListener('load', onLoad);
 
